@@ -1,7 +1,7 @@
 Clone from github
-git clone git@github.com:yuroyoro/dotfiles.git
+git clone git@github.com:drakontia/dotfiles.git
 
-ln -s dotfiles/.zshrc ~/.zshrc
+./dotfiles/setup.sh
 
 .dotfileの種類
 .vimrc
