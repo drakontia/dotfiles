@@ -19,8 +19,7 @@ Session.vim
 .zshrc.local
 samples
 */_build/*
-Makefile
-make.bat
+nbproject/*
 
 .vim/bundle/
 

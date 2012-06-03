@@ -1,0 +1,1 @@
+/Users/pochinokoya/dotfiles/.zsh

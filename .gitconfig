@@ -1,6 +1,8 @@
 [user]
-  name = Tomohito Ozaki
-  email = ozaki@yuroyoro.com
+  name = drakontia
+  email = mhden@drakontia.com
+[github]
+  user = drakontia
 [color]
   # colorの設定(以下のコマンドは自動で色つける)
   status = auto

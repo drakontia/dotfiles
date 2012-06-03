@@ -8,6 +8,8 @@ if has('vim_starting')
 endif
 
 " Edit {{{
+  NeoBundle 'empand/vim-varnish'
+
   NeoBundle 'drakontia/sphinx.vim'
 
   NeoBundle 'sudo.vim'
