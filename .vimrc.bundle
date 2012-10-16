@@ -3,9 +3,9 @@
 filetype plugin indent off     " required!
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
+  set runtimepath+=$MY_VIMRUNTIME/neobundle.vim/
 endif
+call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
 " Edit {{{
   NeoBundle 'empand/vim-varnish'
@@ -163,7 +163,7 @@ endif
   NeoBundle 'Pydiction'
 
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  NeoBundle 'taglist.vim'
+  " NeoBundle 'taglist.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
   " Bundle 'Source-Explorer-srcexpl.vim'
