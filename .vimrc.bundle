@@ -47,7 +47,7 @@ endif
 
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/surround.vim'
-
+  NeoBundle 'tomtom/tcomment_vim'　
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
 
@@ -111,6 +111,8 @@ endif
 
   " A neocomplcache plugin for English, using look command
   " Bundle 'ujihisa/neco-look'
+
+  NeoBundle 'taichouchou2/vim-rsense'
 " }}}
 
 " Searching/Moving{{{
@@ -159,6 +161,9 @@ endif
   " rails.vim : rails的なアレ
   NeoBundle 'tpope/vim-rails'
 
+  " rspec
+  NeoBundle 'skwp/vim-rspec'
+
   " Pydiction : Python用の入力補完
   NeoBundle 'Pydiction'
 
@@ -196,6 +201,9 @@ endif
 
   " scala
   NeoBundle 'yuroyoro/vim-scala'
+
+  " RDBMS
+  NeoBundle 'vim-scripts/dbext.vim'
 
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
   NeoBundle 'scrooloose/syntastic'
@@ -280,8 +288,9 @@ endif
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'tsukkee/unite-help'
   NeoBundle 'h1mesuke/unite-outline'
-  " Bundle 'Sixeight/unite-grep'
+  NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
+  NeoBundle 'ujihisa/unite-rake'
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
