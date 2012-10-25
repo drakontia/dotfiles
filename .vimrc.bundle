@@ -8,9 +8,6 @@ if has('vim_starting')
 endif
 
 " Edit {{{
-  NeoBundle 'empand/vim-varnish'
-
-  NeoBundle 'drakontia/sphinx.vim'
 
   NeoBundle 'sudo.vim'
 
@@ -43,10 +40,10 @@ endif
   NeoBundle 'YankRing.vim'
 
   " undo履歴を追える (need python support)
-  NeoBundle 'Gundo'
+  " NeoBundle 'Gundo'
 
   " surround.vim : テキストを括弧で囲む／削除する
-  NeoBundle 'tpope/surround.vim'
+  NeoBundle 'tpope/vim-surround'
   NeoBundle 'tomtom/tcomment_vim'　
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
@@ -143,6 +140,8 @@ endif
   " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
   NeoBundle 'tyru/open-browser.vim'
 
+  " Sphinx
+  NeoBundle 'drakontia/sphinx.vim'
 " }}}
 
 " Programming {{{
@@ -168,13 +167,13 @@ endif
   NeoBundle 'Pydiction'
 
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  " NeoBundle 'taglist.vim'
+  NeoBundle 'taglist.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
-  " Bundle 'Source-Explorer-srcexpl.vim'
+  NeoBundle 'Source-Explorer-srcexpl.vim'
 
   " NERD_tree, taglist, srcexpl の統合
-  " Bundle 'trinity.vim'
+  NeoBundle 'trinity.vim'
 " }}}
 "
 " Syntax {{{
@@ -207,6 +206,10 @@ endif
 
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
   NeoBundle 'scrooloose/syntastic'
+
+  " Varnish
+  NeoBundle 'nwjsmith/vim-varnish'
+
 " }}}
 
 " Buffer {{{
