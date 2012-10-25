@@ -8,7 +8,7 @@ endif
 call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
 " Edit {{{
-  NeoBundle 'empand/vim-varnish'
+  NeoBundle 'empanda/vim-varnish'
 
   NeoBundle 'drakontia/sphinx.vim'
 
@@ -43,10 +43,10 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
   NeoBundle 'YankRing.vim'
 
   " undo履歴を追える (need python support)
-  NeoBundle 'Gundo'
+  " NeoBundle 'Gundo'
 
   " surround.vim : テキストを括弧で囲む／削除する
-  NeoBundle 'tpope/surround.vim'
+  NeoBundle 'tpope/vim-surround'
 
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
@@ -163,13 +163,13 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
   NeoBundle 'Pydiction'
 
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  " NeoBundle 'taglist.vim'
+  NeoBundle 'taglist.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
-  " Bundle 'Source-Explorer-srcexpl.vim'
+  NeoBundle 'Source-Explorer-srcexpl.vim'
 
   " NERD_tree, taglist, srcexpl の統合
-  " Bundle 'trinity.vim'
+  NeoBundle 'trinity.vim'
 " }}}
 "
 " Syntax {{{
