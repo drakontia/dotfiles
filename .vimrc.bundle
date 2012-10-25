@@ -44,7 +44,7 @@ endif
 
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/vim-surround'
-  NeoBundle 'tomtom/tcomment_vim'　
+  " NeoBundle 'tomtom/tcomment_vim'　
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
 
@@ -109,7 +109,7 @@ endif
   " A neocomplcache plugin for English, using look command
   " Bundle 'ujihisa/neco-look'
 
-  NeoBundle 'taichouchou2/vim-rsense'
+  " NeoBundle 'taichouchou2/vim-rsense'
 " }}}
 
 " Searching/Moving{{{
