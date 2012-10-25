@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DOT_FILES=( .bashrc .ctags .gdbinit .gemrc .gitconfig .gitignore .inputrc .irbrc .minttyrc .screenrc .vimrc .dir_colors .rdebugrc)
+DOT_FILES=( .bashrc .ctags .gdbinit .gemrc .gitconfig .gitignore .vimrc .dir_colors .minttyrc .rdebugrc)
 
 for file in ${DOT_FILES[@]}
 do

@@ -8,10 +8,6 @@ endif
 call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
 " Edit {{{
-  NeoBundle 'empanda/vim-varnish'
-
-  NeoBundle 'drakontia/sphinx.vim'
-
   NeoBundle 'sudo.vim'
 
   " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
@@ -47,6 +43,7 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/vim-surround'
+  " NeoBundle 'tomtom/tcomment_vim'　
 
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
@@ -111,6 +108,8 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
   " A neocomplcache plugin for English, using look command
   " Bundle 'ujihisa/neco-look'
+
+  " NeoBundle 'taichouchou2/vim-rsense'
 " }}}
 
 " Searching/Moving{{{
@@ -141,6 +140,8 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
   " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
   NeoBundle 'tyru/open-browser.vim'
 
+  " Sphinx
+  NeoBundle 'drakontia/sphinx.vim'
 " }}}
 
 " Programming {{{
@@ -158,6 +159,9 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
 
   " rails.vim : rails的なアレ
   NeoBundle 'tpope/vim-rails'
+
+  " rspec
+  NeoBundle 'skwp/vim-rspec'
 
   " Pydiction : Python用の入力補完
   NeoBundle 'Pydiction'
@@ -197,8 +201,15 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
   " scala
   NeoBundle 'yuroyoro/vim-scala'
 
+  " RDBMS
+  NeoBundle 'vim-scripts/dbext.vim'
+
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
   NeoBundle 'scrooloose/syntastic'
+
+  " Varnish
+  NeoBundle 'nwjsmith/vim-varnish'
+
 " }}}
 
 " Buffer {{{
@@ -280,8 +291,9 @@ call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'tsukkee/unite-help'
   NeoBundle 'h1mesuke/unite-outline'
-  " Bundle 'Sixeight/unite-grep'
+  NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
+  NeoBundle 'ujihisa/unite-rake'
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
