@@ -14,8 +14,6 @@ source ~/dotfiles/.vimrc.tags
 source ~/dotfiles/.vimrc.search
 "移動関連
 source ~/dotfiles/.vimrc.moving
-"Color関連
-source ~/dotfiles/.vimrc.colors
 "編集関連
 source ~/dotfiles/.vimrc.editing
 "エンコーディング関連
@@ -24,3 +22,5 @@ source ~/dotfiles/.vimrc.encoding
 source ~/dotfiles/.vimrc.bundle
 "プラグインに依存するアレ
 source ~/dotfiles/.vimrc.plugins
+"Color関連
+source ~/dotfiles/.vimrc.colors
