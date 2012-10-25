@@ -3,9 +3,9 @@
 filetype plugin indent off     " required!
 
 if has('vim_starting')
-  set runtimepath+=$MY_VIMRUNTIME/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('$MY_VIMRUNTIME/bundle/'))
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Edit {{{
   NeoBundle 'sudo.vim'
