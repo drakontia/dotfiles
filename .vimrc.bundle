@@ -163,7 +163,7 @@ endif
   NeoBundle 'Pydiction'
 
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  NeoBundle 'taglist.vim'
+  " NeoBundle 'taglist.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
   " Bundle 'Source-Explorer-srcexpl.vim'
