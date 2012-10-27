@@ -4,14 +4,10 @@ filetype plugin indent off     " required!
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+call neobundle#rc(expand('~/.vim/bundle/'))
 
 " Edit {{{
-  NeoBundle 'empand/vim-varnish'
-
-  NeoBundle 'drakontia/sphinx.vim'
-
   NeoBundle 'sudo.vim'
 
   " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
@@ -43,10 +39,11 @@ endif
   NeoBundle 'YankRing.vim'
 
   " undo履歴を追える (need python support)
-  NeoBundle 'Gundo'
+  " NeoBundle 'Gundo'
 
   " surround.vim : テキストを括弧で囲む／削除する
-  NeoBundle 'tpope/surround.vim'
+  NeoBundle 'tpope/vim-surround'
+  " NeoBundle 'tomtom/tcomment_vim'　
 
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
@@ -111,6 +108,8 @@ endif
 
   " A neocomplcache plugin for English, using look command
   " Bundle 'ujihisa/neco-look'
+
+  " NeoBundle 'taichouchou2/vim-rsense'
 " }}}
 
 " Searching/Moving{{{
@@ -141,6 +140,8 @@ endif
   " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
   NeoBundle 'tyru/open-browser.vim'
 
+  " Sphinx
+  NeoBundle 'drakontia/sphinx.vim'
 " }}}
 
 " Programming {{{
@@ -159,6 +160,9 @@ endif
   " rails.vim : rails的なアレ
   NeoBundle 'tpope/vim-rails'
 
+  " rspec
+  NeoBundle 'skwp/vim-rspec'
+
   " Pydiction : Python用の入力補完
   NeoBundle 'Pydiction'
 
@@ -166,10 +170,10 @@ endif
   NeoBundle 'taglist.vim'
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
-  " Bundle 'Source-Explorer-srcexpl.vim'
+  NeoBundle 'Source-Explorer-srcexpl.vim'
 
   " NERD_tree, taglist, srcexpl の統合
-  " Bundle 'trinity.vim'
+  NeoBundle 'trinity.vim'
 " }}}
 "
 " Syntax {{{
@@ -197,8 +201,15 @@ endif
   " scala
   NeoBundle 'yuroyoro/vim-scala'
 
+  " RDBMS
+  NeoBundle 'vim-scripts/dbext.vim'
+
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
   NeoBundle 'scrooloose/syntastic'
+
+  " Varnish
+  NeoBundle 'nwjsmith/vim-varnish'
+
 " }}}
 
 " Buffer {{{
@@ -280,8 +291,9 @@ endif
   NeoBundle 'Shougo/unite.vim'
   NeoBundle 'tsukkee/unite-help'
   NeoBundle 'h1mesuke/unite-outline'
-  " Bundle 'Sixeight/unite-grep'
+  NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
+  NeoBundle 'ujihisa/unite-rake'
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'

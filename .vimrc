@@ -1,6 +1,3 @@
-"NeoBunlde.vimで管理してるpluginを読み込む
-source ~/dotfiles/.vimrc.bundle
-
 "基本設定
 source ~/dotfiles/.vimrc.basic
 "StatusLine設定
@@ -17,12 +14,13 @@ source ~/dotfiles/.vimrc.tags
 source ~/dotfiles/.vimrc.search
 "移動関連
 source ~/dotfiles/.vimrc.moving
-"Color関連
-source ~/dotfiles/.vimrc.colors
 "編集関連
 source ~/dotfiles/.vimrc.editing
 "エンコーディング関連
 source ~/dotfiles/.vimrc.encoding
+"NeoBunlde.vimで管理してるpluginを読み込む
+source ~/dotfiles/.vimrc.bundle
 "プラグインに依存するアレ
 source ~/dotfiles/.vimrc.plugins
-
+"Color関連
+source ~/dotfiles/.vimrc.colors
