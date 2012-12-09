@@ -58,10 +58,10 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   "NeoBundle 'operator-replace'
 
   " textobj-user : 簡単にVimエディタのテキストオブジェクトをつくれる
-  "NeoBundle 'textobj-user'
+  NeoBundle 'textobj-user'
 
   " vim-textobj-syntax : syntax hilightされたものをtext-objectに
-  "NeoBundle 'kana/vim-textobj-syntax.git'
+  NeoBundle 'kana/vim-textobj-syntax.git'
 
   " vim-textobj-plugins : いろんなものをtext-objectにする
   "NeoBundle 'thinca/vim-textobj-plugins.git'
@@ -104,6 +104,9 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   NeoBundle 'Shougo/neosnippet'
 
   " rubyでrequire先を補完する
+  NeoBundle 'rhysd/unite-ruby-require.vim'
+  NeoBundle 'rhysd/neco-ruby-keyword-args'
+  NeoBundle 'rhysd/vim-textobj-ruby'
   " Bundle 'ujihisa/neco-ruby'
 
   " A neocomplcache plugin for English, using look command
@@ -297,6 +300,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   NeoBundle 'thinca/vim-unite-history'
   NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
+  NeoBundle 'Shougo/unite-outline'
 
 " }}}
 "
