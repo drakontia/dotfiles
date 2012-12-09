@@ -173,7 +173,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   NeoBundle 'Source-Explorer-srcexpl.vim'
 
   " NERD_tree, taglist, srcexpl の統合
-  NeoBundle 'trinity.vim'
+  NeoBundle 'Trinity'
 " }}}
 "
 " Syntax {{{
