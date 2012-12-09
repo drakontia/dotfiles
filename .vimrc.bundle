@@ -101,7 +101,7 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   NeoBundle 'Shougo/neocomplcache'
 
   " neocomplcacheのsinpet補完
-  NeoBundle 'Shougo/neocomplcache-snippets-complete'
+  NeoBundle 'Shougo/neosnippet'
 
   " rubyでrequire先を補完する
   " Bundle 'ujihisa/neco-ruby'
