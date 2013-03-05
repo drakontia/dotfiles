@@ -119,6 +119,12 @@
 
 [http]
   sslVerify = false
+  #if you need
+  #proxy = http://xxx.com:8080
+
+[https]
+  #if you need
+  #proxy = https://xxx.com:8080
 
 [tig "bind"]
   generic = g move-first-line
