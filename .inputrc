@@ -9,6 +9,8 @@ set expand-tilde on
 set input-meta on
 set convert-meta off
 set output-meta on
+set meta-flag on
+set kanji-code sjis
 
 # タブ補完時、大文字小文字無視
 set completion-ignore-case on
