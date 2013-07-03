@@ -1,0 +1,5 @@
+" Simplenote.vim setting sample
+let g:SimplenoteUsername = "your simplenote username"
+let g:SimplenotePassword = "your simplenote password"
+let $HTTP_PROXY = 'http://<proxyuser>:<proxypassword>@<proxyurl>:<proxyport>'
+let $HTTPS_PROXY = 'http://<proxyuser>:<proxypassword>@<proxyurl>:<proxyport>'
