@@ -3,9 +3,11 @@
 filetype plugin indent off     " required!
 
 if has('vim_starting')
-  set runtimepath+=~/.vim/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Edit {{{
   NeoBundle 'sudo.vim'
@@ -104,10 +106,10 @@ call neobundle#rc(expand('~/.vim/bundle/'))
   " Bundle 'AutoComplPop'
 
   " 補完 neocomplcache.vim : 究極のVim的補完環境
-  NeoBundle 'Shougo/neocomplcache'
+  NeoBundle 'Shougo/neocomplete.vim'
 
   " neocomplcacheのsinpet補完
-  NeoBundle 'Shougo/neosnippet'
+  NeoBundle 'Shougo/neosnippet.vim'
 
   " rubyでrequire先を補完する
   NeoBundle 'rhysd/unite-ruby-require.vim'
