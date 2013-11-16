@@ -299,16 +299,39 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Unite {{{{
   " unite.vim : - すべてを破壊し、すべてを繋げ - vim scriptで実装されたanythingプラグイン
-  NeoBundle 'Shougo/unite.vim'
-  NeoBundle 'tsukkee/unite-help'
-  NeoBundle 'h1mesuke/unite-outline'
+  NeoBundle 'Shougo/unite.vim', '', 'default'
+  call neobundle#config('unite.vim',{
+        \ 'lazy' : 1,
+        \ 'autoload' : {
+        \   'commands' : [{ 'name' : 'Unite',
+        \                   'complete' : 'customlist,unite#complete_source'},
+        \                 'UniteWithCursorWord', 'UniteWithInput']
+        \ }})
+  NeoBundle 'Shougo/unite-build', '', 'default'
+  NeoBundle 'Shougo/unite-ssh', '', 'default'
+  NeoBundleLazy 'ujihisa/vimshell-ssh', { 'autoload' : {
+        \ 'filetypes' : 'vimshell',
+        \ }}
+  NeoBundle 'Shougo/unite-sudo', '', 'default'
+  NeoBundleLazy 'Shougo/unite-help', { 'autoload' : {
+        \ 'unite_sources' : 'help'
+        \ }}
+  NeoBundle 'Shougo/unite-outline', '', 'default'
+  call neobundle#config('unite-outline', {
+        \ 'lazy' : 1,
+        \ 'autoload' : {
+        \   'unite_sources' : 'outline'},
+        \ })
+  NeoBundleLazy 'tsukkee/unite-tag', { 'autoload' : {
+        \ 'unite_sources' : 'tag'
+        \ }}
+  NeoBundleLazy 'thinca/vim-unite-history', { 'autoload' : {
+        \ 'unite_sources' : ['history/command', 'history/search']
+        \ }}
   NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
   NeoBundle 'ujihisa/unite-rake'
-  NeoBundle 'thinca/vim-unite-history'
-  NeoBundle 'tsukkee/unite-tag'
   NeoBundle 'choplin/unite-vim_hacks'
-  NeoBundle 'Shougo/unite-outline'
 
 " }}}
 "
