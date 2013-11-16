@@ -13,7 +13,7 @@
 [push]
   default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
-  excludesfile = ~/.gitignore  # globalな.gitignoreの指定
+  excludesfile = /opt/boxen/config/git/gitignore
   autocrlf = input                 # CRLFを自動変換
   editor = vim
   quotepath = false
@@ -131,3 +131,9 @@
   generic = G move-last-line
   generic = ^F move-page-down
   generic = ^B move-page-up
+
+[credential]
+helper = /opt/boxen/bin/boxen-git-credential
+
+[hub]
+  #protocol = https
