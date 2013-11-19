@@ -153,4 +153,14 @@ if has('syntax')
   call ZenkakuSpace()
 endif
 
+""""""""""""""""""""""""""""""
+" 特定環境でのプロキシ超えの設定
+""""""""""""""""""""""""""""""
+" NeoBundle {{{
+
+" 使用するプロトコルを変更する
+let g:neobundle_default_git_porotocol='https'
+
+" }}}
+
 source ~/dotfiles/.vimrc
