@@ -13,7 +13,7 @@
 [push]
   default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
-  excludesfile = /opt/boxen/config/git/gitignore
+	excludesfile = ~/.gitignore
   autocrlf = input                 # CRLFを自動変換
   editor = vim
   quotepath = false
