@@ -7,6 +7,7 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
+let g:neobundle_default_git_protocol='git'
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Edit {{{
@@ -246,7 +247,14 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Shougo/vimshell.git'
 
   " vimproc : vimから非同期実行。vimshelleで必要
-  NeoBundle 'Shougo/vimproc.git'
+  NeoBundle 'Shougo/vimproc', {
+      \ 'build' : {
+      \     'windows' : 'make -f make_mingw32.mak',
+      \     'cygwin' : 'make -f make_cygwin.mak',
+      \     'mac' : 'make -f make_mac.mak',
+      \     'unix' : 'make -f make_unix.mak',
+      \    },
+      \ }
 
   " vim-altercmd : Ex command拡張
   NeoBundle 'tyru/vim-altercmd'
