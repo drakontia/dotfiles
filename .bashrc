@@ -1,10 +1,7 @@
-source /opt/boxen/env.sh
-
 # requre bash_completion
-if [ -d `brew --prefix`/etc/bash_completion.d ]; then
-    source `brew --prefix`/etc/bash_completion.d/git-completion.bash
-    source `brew --prefix`/etc/bash_completion.d/git-prompt.sh
-    source `brew --prefix`/etc/bash_completion.d/hub.bash_completion.sh
+if [ -d /etc/bash_completion.d ]; then
+    source /etc/bash_completion.d/git
+    source /etc/bash_completion.d/mercurial.sh
 fi
 
 # prompt command
@@ -17,7 +14,7 @@ git_branch() {
 }
 
 # setting for prompt
-if [ -d `brew --prefix`/etc/bash_completion.d ]; then
+if [ -d /etc/bash_completion.d ]; then
     echo "git-completion enabled..."
     PS1="\[\033[0;37m\][\[\033[0;32m\]\t \[\033[1;36m\]\u\[\033[0;37m\]@\h \$(git_branch)\$(hg_branch) \[\033[0;32m\]\w\[\033[0;37m\]]\n\$ "
 else
@@ -27,9 +24,3 @@ fi
 export PS1
 set -o vi
 alias vi='vim'
-
-## rbenv
-if [[ -s /opt/boxen/rbenv/bin ]] ; then
-  rbenv global 2.0.0-p247
-  rbenv version | sed -e 's/ .*//'
-fi
