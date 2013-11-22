@@ -13,9 +13,9 @@
 [push]
   default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
-  excludesfile = /opt/boxen/config/git/gitignore
-  autocrlf = input                 # CRLFを自動変換
-  editor = vim
+  excludesfile = C:\\Users\\user1\\.gitignore
+  autocrlf = input
+  editor = c:/Vim/gvim.exe
   quotepath = false
 [merge]
   tool = vimdiff
@@ -120,20 +120,14 @@
 [http]
   sslVerify = false
   #if you need
-  #proxy = http://xxx.com:8080
+	#proxy = http://xxx.com:8080
 
 [https]
   #if you need
-  #proxy = https://xxx.com:8080
+	#proxy = https://xxx.com:8080
 
 [tig "bind"]
   generic = g move-first-line
   generic = G move-last-line
   generic = ^F move-page-down
   generic = ^B move-page-up
-
-[credential]
-helper = /opt/boxen/bin/boxen-git-credential
-
-[hub]
-  #protocol = https
