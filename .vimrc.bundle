@@ -7,7 +7,7 @@ if has('vim_starting')
 endif
 call neobundle#rc(expand('~/.vim/bundle/'))
 
-let g:neobundle_default_git_protocol='git'
+"let g:neobundle_default_git_protocol='git'
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Edit {{{
@@ -111,6 +111,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " neocomplcacheのsinpet補完
   NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
   " rubyでrequire先を補完する
   NeoBundle 'rhysd/unite-ruby-require.vim'
@@ -336,7 +337,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundleLazy 'thinca/vim-unite-history', { 'autoload' : {
         \ 'unite_sources' : ['history/command', 'history/search']
         \ }}
-  NeoBundle 'Sixeight/unite-grep'
+  " NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
   NeoBundle 'ujihisa/unite-rake'
   NeoBundle 'choplin/unite-vim_hacks'
