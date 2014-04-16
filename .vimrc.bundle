@@ -110,6 +110,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " neocomplcacheのsinpet補完
   NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
   " rubyでrequire先を補完する
   NeoBundle 'rhysd/unite-ruby-require.vim'
@@ -273,7 +274,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'yuroyoro/vimdoc_ja'
 
   " vim上のtwitter client
-  NeoBundle 'TwitVim'
+  NeoBundle 'basyura/TweetVim'
 
   " Lingrのclient
   NeoBundle 'tsukkee/lingr-vim'
@@ -285,7 +286,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Lokaltog/vim-powerline'
 
   " Simplenote API
-  NeoBundle 'mrtazz/simplenote.vim'
+  NeoBundle 'mattn/vimplenote-vim'
 
 " }}}
 
