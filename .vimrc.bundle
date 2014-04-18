@@ -52,7 +52,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " surround.vim : テキストを括弧で囲む／削除する
   NeoBundle 'tpope/vim-surround'
-  " NeoBundle 'tomtom/tcomment_vim'　
+  " NeoBundle 'tomtom/tcomment_vim'
 
   " smartchr.vim : ==などの前後を整形
   NeoBundle 'smartchr'
@@ -282,7 +282,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'yuroyoro/vimdoc_ja'
 
   " vim上のtwitter client
-  NeoBundle 'TwitVim'
+  NeoBundle 'tryu/open-browser.vim'
+  NeoBundle 'basyura/twibill.vim'
+  NeoBundle 'basyura/TweetVim'
 
   " Lingrのclient
   NeoBundle 'tsukkee/lingr-vim'
@@ -294,7 +296,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'Lokaltog/vim-powerline'
 
   " Simplenote API
-  NeoBundle 'mrtazz/simplenote.vim'
+  NeoBundle 'mattn/webapi-vim'
+  NeoBundle 'mattn/vimplenote-vim'
 
 " }}}
 
