@@ -150,9 +150,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " eregex.vim : vimの正規表現をrubyやperlの正規表現な入力でできる :%S/perlregex/
   NeoBundle 'eregex.vim'
 
-  " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
-  NeoBundle 'tyru/open-browser.vim'
-
 " }}}
 
 " Programming {{{
@@ -281,8 +278,10 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " vimdoc 日本語
   NeoBundle 'yuroyoro/vimdoc_ja'
 
+  " open-browser.vim : カーソルの下のURLを開くor単語を検索エンジンで検索
+  NeoBundle 'tyru/open-browser.vim'
+
   " vim上のtwitter client
-  NeoBundle 'tryu/open-browser.vim'
   NeoBundle 'basyura/twibill.vim'
   NeoBundle 'basyura/TweetVim'
 
@@ -293,7 +292,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'tpope/vim-fugitive'
 
   " ステータスラインをカッコよくする
-  NeoBundle 'Lokaltog/vim-powerline'
+  NeoBundle 'Lokaltog/powerline-fonts'
+  NeoBundle 'itchyny/lightline.vim'
 
   " Simplenote API
   NeoBundle 'mattn/webapi-vim'
@@ -303,6 +303,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " ColorSchema{{{{
   " color schema 256
+  NeoBundle 'itchyny/landscape.vim'
   NeoBundle 'desert256.vim'
   NeoBundle 'mrkn256.vim'
   NeoBundle 'tomasr/molokai'
