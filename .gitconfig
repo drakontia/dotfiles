@@ -13,12 +13,21 @@
 [push]
   default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
-  excludesfile = C:\\Users\\user1\\.gitignore
+  excludesfile = C:/Users/user1/.gitignore
   autocrlf = input
-  editor = c:/Vim/gvim.exe
+  editor = C:/Vim/gvim.exe
   quotepath = false
 [merge]
-  tool = vimdiff
+  tool = WinMerge
+[mergetool "WinMerge"]
+  path = C:/Program Files/WinMerge/WinMergeU.exe
+  cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" /m /r=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
+[diff]
+  tool = WinMerge
+  guitool = WinMerge
+[difftool "WinMerge"]
+  path = C:/Program Files/WinMerge/WinMergeU.exe
+  cmd = \"C:/Program Files/WinMerge/WinMergeU.exe\" -e -ub -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\"
 [alias]
   s   = status
   st  = status
@@ -120,11 +129,11 @@
 [http]
   sslVerify = false
   #if you need
-	#proxy = http://xxx.com:8080
+  #proxy = http://xxx.com:8080
 
 [https]
   #if you need
-	#proxy = https://xxx.com:8080
+  #proxy = https://xxx.com:8080
 
 [tig "bind"]
   generic = g move-first-line
