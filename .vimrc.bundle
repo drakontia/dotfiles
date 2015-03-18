@@ -3,14 +3,19 @@
 filetype plugin indent off     " required!
 
 if has('vim_starting')
+  if &compatible
+    set nocompatible           " Be iMproved
+  endif
+
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
-call neobundle#rc(expand('~/.vim/bundle/'))
 
-"let g:neobundle_default_git_protocol='git'
-NeoBundleFetch 'Shougo/neobundle.vim'
+call neobundle#begin(expand('~/.vim/bundle/'))
 
-" Edit {{{
+  "let g:neobundle_default_git_protocol='git'
+  NeoBundleFetch 'Shougo/neobundle.vim'
+
+  " Edit {{{
   NeoBundle 'sudo.vim'
 
   " NERD_commenter.vim :最強コメント処理 (<Leader>c<space>でコメントをトグル)
@@ -108,15 +113,17 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   NeoBundle 'KazuakiM/vim-snippets'
   " ultisnips {{{
-  NeoBundle 'SirVer/ultisnips'
-    let g:UltiSnipsJumpForwardTrigger='<TAB>'
-    let g:UltiSnipsEditSplit='vertical'
-    let g:UltiSnipsSnippetsDir=$HOME.'/.vim/bundle/vim-snippets/UltiSnips'
+  " NeoBundle 'SirVer/ultisnips'
+    " let g:UltiSnipsExpandTrigger="<tab>"
+    " let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    " let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    " let g:UltiSnipsEditSplit='vertical'
+    " let g:UltiSnipsSnippetsDir=$HOME.'/.vim/bundle/vim-snippets/UltiSnips'
   " }}}
 
   " 補完 neocomplcache.vim : 究極のVim的補完環境
   NeoBundleLazy 'Shougo/neocomplete.vim', {
-  \ 'depends': ['KazuakiM/vim-snippets', 'SirVer/ultisnips', 'Shougo/context_filetype.vim'],
+  \ 'depends': ['KazuakiM/vim-snippets', 'Shougo/context_filetype.vim'],
   \ 'autoload' : {
   \   'insert' : 1,},}
 
@@ -128,12 +135,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'rhysd/unite-ruby-require.vim'
   NeoBundle 'rhysd/neco-ruby-keyword-args'
   NeoBundle 'rhysd/vim-textobj-ruby'
-  " Bundle 'ujihisa/neco-ruby'
 
-  " A neocomplcache plugin for English, using look command
-  " Bundle 'ujihisa/neco-look'
+  NeoBundle 'marcus/rsense'
+  NeoBundle 'supermomonga/neocomplete-rsense.vim'
 
-  " NeoBundle 'taichouchou2/vim-rsense'
+  " 静的解析
+  NeoBundle 'scrooloose/syntastic'
+
+  " ドキュメント参照
+  NeoBundle 'thinca/vim-ref'
+  NeoBundle 'yuku-t/vim-ref-ri'
+  " 自動で閉じる
+  NeoBundle 'tpope/vim-endwise'
 
   " vim-watchdogs
   NeoBundleLazy 'osyo-manga/vim-watchdogs', {
@@ -375,6 +388,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'choplin/unite-vim_hacks'
 
 " }}}
-"
+
+call neobundle#end()
 
 filetype plugin indent on
