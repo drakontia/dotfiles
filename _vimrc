@@ -159,7 +159,7 @@ endif
 " NeoBundle {{{
 
 " 使用するプロトコルを変更する
-let g:neobundle_default_git_porotocol='https'
+" let g:neobundle_default_git_porotocol='https'
 
 " }}}
 

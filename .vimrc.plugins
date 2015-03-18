@@ -2,21 +2,17 @@
 " プラグインごとの設定 Plugins
 "-------------------------------------------------------------------------------
 
-"------------------------------------
-" simplenote.vim
-"------------------------------------
+" simplenote.vim {{{
 " SimpleNoteへの接続情報
 source ~/.simplenote.rc
+" }}}
 
-"------------------------------------
-" YankRing.vim
-"------------------------------------
+" YankRing.vim {{{
 " Yankの履歴参照
 nmap ,y ;YRShow<CR>
+" }}}
 
-"------------------------------------
-" MiniBufExplorer
-"------------------------------------
+" MiniBufExplorer {{{
 "set minibfexp
 let g:miniBufExplMapWindowNavVim=1 "hjklで移動
 let g:miniBufExplSplitBelow=0  " Put new window above
@@ -28,52 +24,45 @@ let g:miniBufExplMaxSize = 10
 
 ":MtでMiniBufExplorerの表示トグル
 command! Mt :TMiniBufExplorer
+" }}}
 
-"------------------------------------
-" Align
-"------------------------------------
+" Align {{{
 " Alignを日本語環境で使用するための設定
 let g:Align_xstrlen = 3
+" }}}
 
-"------------------------------------
-" VTreeExplorer
-"------------------------------------
+" VTreeExplorer {{{
 " 縦に表示する
 let g:treeExplVertical=1
+" }}}
 
-"------------------------------------
-" NERD_commenter.vim
-"------------------------------------
+" NERD_commenter.vim {{{
 " コメントの間にスペースを空ける
 let NERDSpaceDelims = 1
 "<Leader>xでコメントをトグル(NERD_commenter.vim)
 map <Leader>x, c<space>
 ""未対応ファイルタイプのエラーメッセージを表示しない
 let NERDShutUp=1
+" }}}
 
-" ------------------------------------
-" grep.vim
-"------------------------------------
+" grep.vim {{{
 " 検索外のディレクトリ、ファイルパターン
 let Grep_Skip_Dirs = '.svn .git .hg'
 let Grep_Skip_Files = '*.bak *~'
--
-"------------------------------------
-" surround.vim
-"------------------------------------
+" }}}
+
+" surround.vim {{{
 " s, ssで選択範囲を指定文字でくくる
 nmap s <Plug>Ysurround
 nmap ss <Plug>Yssurround
 let g:surround_{char2nr('e')} = "begin \r end"
 let g:surround_{char2nr('d')} = "do \r end"
 let g:surround_{char2nr("-")} = ":\r"
+" }}}
 
-"------------------------------------
-" smartchr.vim
-"------------------------------------
+" smartchr.vim {{{
 "inoremap <expr> = smartchr#loop('=', '==', '=>')
 "inoremap <expr> . smartchr#loop('.',  '->', '=>')
-
 
 " 演算子の間に空白を入れる
 "inoremap <buffer><expr> + smartchr#one_of(' + ', ' ++ ', '+')
@@ -107,11 +96,9 @@ let g:surround_{char2nr("-")} = ":\r"
 "
 " if文直後の(は自動で間に空白を入れる
 "inoremap <buffer><expr> ( search('¥<¥if¥%#', 'bcn')? ' (': '('
+" }}}
 
-
-"------------------------------------
-" Fugitive.vim
-"------------------------------------
+" Fugitive.vim {{{
 nnoremap <Space>gd :<C-u>Gdiff<Enter>
 nnoremap <Space>gs :<C-u>Gstatus<Enter>
 nnoremap <Space>gl :<C-u>Glog<Enter>
@@ -119,26 +106,22 @@ nnoremap <Space>ga :<C-u>Gwrite<Enter>
 nnoremap <Space>gc :<C-u>Gcommit<Enter>
 nnoremap <Space>gC :<C-u>Git commit --amend<Enter>
 nnoremap <Space>gb :<C-u>Gblame<Enter>
+" }}}
 
-
-"------------------------------------
-" BufExplorer
-"------------------------------------
+" BufExplorer {{{
 "<Leader>l<Space>でBufferList
 nnoremap <Leader>l<Space> :BufExplorer<CR>
+" }}}
 
-"------------------------------------
-" VTreeExplorer
-"------------------------------------
+" VTreeExplorer {{{
 let g:treeExplVertical=1
 "<Leader>t<Space>でディレクトリツリー表示
 noremap <Leader>t<Space> :VSTreeExplore<CR>
 "分割したウィンドウのサイズ
 let g:treeExplWinSize=30
+" }}}
 
-"------------------------------------
-" DumbBuf.vim
-"------------------------------------
+" DumbBuf.vim {{{
 "<Leader>b<Space>でBufferList
 let dumbbuf_hotkey = '<Leader>b<Space>'
 let dumbbuf_mappings = {
@@ -150,10 +133,9 @@ let dumbbuf_single_key  = 1
 let dumbbuf_updatetime  = 1    " &updatetimeの最小値
 let dumbbuf_wrap_cursor = 0
 let dumbbuf_remove_marked_when_close = 1
+" }}}
 
-"------------------------------------
-" vim-indent-guides
-"------------------------------------
+" vim-indent-guides {{{
 nnoremap <silent> <Space>id :<C-u>IndentGuidesToggle<Enter>
 let g:indent_guides_auto_colors = 0
 let g:indent_guides_start_level = 4
@@ -167,17 +149,15 @@ else
     hi IndentGuidesOdd  ctermbg=white
     hi IndentGuidesEven ctermbg=lightgrey
 endif
+" }}}
 
-"------------------------------------
-" gundo.Vim
-"------------------------------------
+" gundo.Vim {{{
 " nmap U :<C-u>GundoToggle<CR>
+" }}}
 
-"------------------------------------
-" taglist.Vim
-"------------------------------------
+" taglist.Vim {{{
 " 関数一覧
-set tags=tags
+set tags=./tags,./TAGS,tags,TAGS
 "set tags+=~/.tags
 let Tlist_Ctags_Cmd = 'C:\ctags58j2bin\ctags' " ctagsのパス
 let Tlist_Show_One_File = 1               " 現在編集中のソースのタグしか表示しない
@@ -187,13 +167,13 @@ let Tlist_Enable_Fold_Column = 1          " 折りたたみ
 let Tlist_Auto_Open = 1                   " 自動表示
 let Tlist_Auto_Update = 1
 let Tlist_WinWidth = 30
+let g:tlist_php_settings = 'php;c:class;f:function;d:constant'
 map <silent> <leader>tl :Tlist<CR>        " taglistを開くショットカットキー
 nmap <F7> :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
 nmap <Leader>tl :CMiniBufExplorer<CR>:TrinityToggleTagList<CR>:TMiniBufExplorer<CR>
+" }}}
 
-"------------------------------------
-" Srcexp
-"------------------------------------
+" Srcexp {{{
 " [Srcexpl] tagsを利用したソースコード閲覧・移動補助機能
 let g:SrcExpl_UpdateTags    = 1         " tagsをsrcexpl起動時に自動で作成（更新）
 let g:SrcExpl_RefreshTime   = 0         " 自動表示するまでの時間(0:off)
@@ -202,33 +182,28 @@ let g:SrcExpl_RefreshMapKey = "<Space>" " 手動表示のMAP
 let g:SrcExpl_GoBackMapKey  = "<C-b>"   " 戻る機能のMAP
 " Source Explorerの機能ON/OFF
 nmap <F8> :CMiniBufExplorer<CR>:SrcExplToggle<CR>:TMiniBufExplorer<CR>
+" }}}
 
-"------------------------------------
-" open-blowser.vim
-"------------------------------------
-
+" open-blowser.vim {{{
 " カーソル下のURLをブラウザで開く
 nmap <Leader>fu <Plug>(openbrowser-open)
 vmap <Leader>fu <Plug>(openbrowser-open)
 " カーソル下のキーワードをググる
 nnoremap <Leader>fs :<C-u>OpenBrowserSearch<Space><C-r><C-w><Enter>
+" }}}
 
-"------------------------------------
-" operator-camelize.vim
-"------------------------------------
+" operator-camelize.vim {{{
 " camel-caseへの変換
 map <Leader>u <Plug>(operator-camelize)
 map <Leader>U <Plug>(operator-decamelize)
+" }}}
 
-"------------------------------------
-" operator-replace.vim
-"------------------------------------
+" operator-replace.vim {{{
 " RwなどでYankしてるもので置き換える
 map R <Plug>(operator-replace)
+" }}}
 
-"------------------------------------
-" sumartword.vim
-"------------------------------------
+" sumartword.vim {{{
 noremap ,w  w
 noremap ,b  b
 noremap ,e  e
@@ -238,12 +213,9 @@ map W  <Plug>(smartword-w)
 map B  <Plug>(smartword-b)
 map E  <Plug>(smartword-e)
 map ge  <Plug>(smartword-ge)
+" }}}
 
-
-"------------------------------------
-" camelcasemotion.vim
-"------------------------------------
-
+" camelcasemotion.vim {{{
 " <Shift-wbe>でCameCaseやsnake_case単位での単語移動
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
@@ -255,63 +227,60 @@ omap <silent> ib <Plug>CamelCaseMotion_ib
 xmap <silent> ib <Plug>CamelCaseMotion_ib
 omap <silent> ie <Plug>CamelCaseMotion_ie
 xmap <silent> ie <Plug>CamelCaseMotion_ie
+" }}}
 
-"------------------------------------
-" vimshell
-"------------------------------------
-let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
-let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
-let g:vimshell_enable_smart_case = 1
+" vimshell {{{
+" let g:vimshell_user_prompt = 'fnamemodify(getcwd(), ":~")'
+" let g:vimshell_right_prompt = 'vimshell#vcs#info("(%s)-[%b]", "(%s)-[%b|%a]")'
+" let g:vimshell_enable_smart_case = 1
 
-if has('win32') || has('win64')
- " Display user name on Windows.
-  let g:vimshell_prompt = $USERNAME."% "
-else
- " Display user name on Linux.
-  let g:vimshell_prompt = $USER."% "
+" if has('win32') || has('win64')
+ " " Display user name on Windows.
+  " let g:vimshell_prompt = $USERNAME."% "
+" else
+ " " Display user name on Linux.
+  " let g:vimshell_prompt = $USER."% "
 
-  call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
-  call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
-  let g:vimshell_execute_file_list['zip'] = 'zipinfo'
-  call vimshell#set_execute_file('tgz,gz', 'gzcat')
-  call vimshell#set_execute_file('tbz,bz2', 'bzcat')
-endif
+  " call vimshell#set_execute_file('bmp,jpg,png,gif', 'gexe eog')
+  " call vimshell#set_execute_file('mp3,m4a,ogg', 'gexe amarok')
+  " let g:vimshell_execute_file_list['zip'] = 'zipinfo'
+  " call vimshell#set_execute_file('tgz,gz', 'gzcat')
+  " call vimshell#set_execute_file('tbz,bz2', 'bzcat')
+" endif
 
-function! g:my_chpwd(args, context)
-  call vimshell#execute('echo "chpwd"')
-endfunction
-function! g:my_emptycmd(cmdline, context)
-  call vimshell#execute('echo "emptycmd"')
-  return a:cmdline
-endfunction
-function! g:my_preprompt(args, context)
-  call vimshell#execute('echo "preprompt"')
-endfunction
-function! g:my_preexec(cmdline, context)
-  call vimshell#execute('echo "preexec"')
+" function! g:my_chpwd(args, context)
+  " call vimshell#execute('echo "chpwd"')
+" endfunction
+" function! g:my_emptycmd(cmdline, context)
+  " call vimshell#execute('echo "emptycmd"')
+  " return a:cmdline
+" endfunction
+" function! g:my_preprompt(args, context)
+  " call vimshell#execute('echo "preprompt"')
+" endfunction
+" function! g:my_preexec(cmdline, context)
+  " call vimshell#execute('echo "preexec"')
 
-  if a:cmdline =~# '^\s*diff\>'
-    call vimshell#set_syntax('diff')
-  endif
-  return a:cmdline
-endfunction
+  " if a:cmdline =~# '^\s*diff\>'
+    " call vimshell#set_syntax('diff')
+  " endif
+  " return a:cmdline
+" endfunction
 
-autocmd FileType vimshell
-\ call vimshell#altercmd#define('g', 'git')
-\| call vimshell#altercmd#define('i', 'iexe')
-\| call vimshell#altercmd#define('l', 'll')
-\| call vimshell#altercmd#define('ll', 'ls -l')
-\| call vimshell#hook#set('chpwd', ['g:my_chpwd'])
-\| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
-\| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
-\| call vimshell#hook#set('preexec', ['g:my_preexec'])
+" autocmd FileType vimshell
+" \ call vimshell#altercmd#define('g', 'git')
+" \| call vimshell#altercmd#define('i', 'iexe')
+" \| call vimshell#altercmd#define('l', 'll')
+" \| call vimshell#altercmd#define('ll', 'ls -l')
+" \| call vimshell#hook#set('chpwd', ['g:my_chpwd'])
+" \| call vimshell#hook#set('emptycmd', ['g:my_emptycmd'])
+" \| call vimshell#hook#set('preprompt', ['g:my_preprompt'])
+" \| call vimshell#hook#set('preexec', ['g:my_preexec'])
 
-command! Vs :VimShell
+" command! Vs :VimShell
+" }}}
 
-
-"------------------------------------
-" unite.vim
-"------------------------------------
+" unite.vim {{{
 " The prefix key.
 nnoremap    [unite]   <Nop>
 nmap    f [unite]
@@ -356,14 +325,14 @@ function! s:unite_my_settings()"{{{
 endfunction"}}}
 
 let g:unite_source_file_mru_limit = 200
+" }}}
 
-" unite-plugins
+" unite-plugins {{{
 cnoremap UH Unite help<Enter>
 cnoremap UO Unite outline<Enter>
+" }}}
 
-"------------------------------------
-" quickrun.vim
-"------------------------------------
+" quickrun.vim {{{
 let g:quickrun_config = {}
 " Rspec
 let g:quickrun_config['ruby.rspec'] = {
@@ -410,15 +379,69 @@ function! RSpecQuickrun()
 endfunction
 au BufReadPost *_spec.rb call RSpecQuickrun()
 
+let g:quickrun_config = {
+\    '_' : {
+\        'hook/close_buffer/enable_failure':    1,
+\        'hook/close_buffer/enable_empty_data': 1,
+\        'runner':                              'vimproc',
+\        'runner/vimproc/updatetime':           60,
+\        'outputter':                           'multi:buffer:quickfix',
+\        'outputter/buffer/split':              ':botright',
+\        'outputter/buffer/close_on_empty':     1,},
+\    'watchdogs_checker/_' : {
+\        'hook/close_quickfix/enable_exit':           1,
+\        'hook/back_window/enable_exit':              0,
+\        'hook/back_window/priority_exit':            1,
+\        'hook/quickfix_status_enable/enable_exit':   1,
+\        'hook/quickfix_status_enable/priority_exit': 2,
+\        'hook/qfsigns_update/enable_exit':           1,
+\        'hook/qfsigns_update/priority_exit':         3,
+\        'hook/qfstatusline_update/enable_exit':      1,
+\        'hook/qfstatusline_update/priority_exit':    4,},
+\    'watchdogs_checker/php' : {
+\        'command':     'php',
+\        'exec':        '%c -d error_reporting=E_ALL -d display_errors=1 -d display_startup_errors=1 -d log_errors=0 -d xdebug.cli_color=0 -l %o %s:p',
+\        'errorformat': '%m\ in\ %f\ on\ line\ %l',},}
+"}}}
 
-"------------------------------------
-" Pydiction
-"------------------------------------
+" vim-watchdogs {{{
+let s:hooks = neobundle#get_hooks('vim-watchdogs')
+function! s:hooks.on_source(bundle)
+    "vim-qfsigns
+    nnoremap <Leader>sy :QfsignsJunmp<CR>
+    "vim-qfstatusline (This setting is userd at lightline)
+    "let g:Qfstatusline#UpdateCmd = function('lightline#update')
+    "vim-watchdogs
+    let g:watchdogs_check_BufWritePost_enable = 0
+    let g:watchdogs_check_BufWritePost_enables = {
+    \   'php' : 1,}
+    let g:watchdogs_check_CursorHold_enable = 1
+endfunction
+unlet s:hooks
+" }}}
+
+" vim-php-cs-fixer {{{
+let s:hooks = neobundle#get_hooks('vim-php-cs-fixer')
+function! s:hooks.on_source(bundle)
+    let g:php_cs_fixer_path = '$HOME/AppData/Roaming/Composer/vendor/bin/php-cs-fixer' " define the path to the php-cs-fixer.phar
+    let g:php_cs_fixer_level='all'              " which level ?
+    let g:php_cs_fixer_config='default'         " configuration
+    let g:php_cs_fixer_php_path='php'           " Path to PHP
+    " If you want to define specific fixers:
+    "let g:php_cs_fixer_fixers_list = 'linefeed,short_tag,indentation'
+    let g:php_cs_fixer_enable_default_mapping=1 " Enable the mapping by default (<leader>pcd)
+    let g:php_cs_fixer_dry_run=0                " Call command with dry-run option
+    let g:php_cs_fixer_verbose=0                " Return the output of command if 1, else an inline information.
+    nnoremap <Leader>php :call PhpCsFixerFixFile()<CR>
+endfunction
+unlet s:hooks
+"}}}
+
+" Pydiction {{{
 let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
+" }}}
 
-"------------------------------------
-" vim-rails.vim
-"------------------------------------
+" vim-rails.vim {{{
 let g:rails_some_option = 1
 let g:rails_level = 4
 let g:rails_syntax = 1
@@ -449,28 +472,25 @@ function! SetUpRailsSetting()
   setl dict+=~/.vim/dict/ruby.dict
 endfunction
 autocmd User Rails call SetUpRailsSetting()
+" }}}
 
-"------------------------------------
-" Syntastic
-"------------------------------------
+" Syntastic {{{
 " エラー行をsignで表示する
 let g:syntastic_enable_signs = 1
 " 可能ならhighligt表示する
 let g:syntastic_enable_highlighting = 1
+" }}}
 
-"------------------------------------
-" toggle.vim
-"------------------------------------
+" toggle.vim {{{
 imap <C-A> <Plug>ToggleI
 nmap <C-A> <Plug>ToggleN
 vmap <C-A> <Plug>ToggleV
 
 let g:toggle_pairs = { 'and':'or', 'or':'and', 'if':'unless', 'unless':'if', 'yes':'no', 'no':'yes', 'enable':'disable', 'disable':'enable', 'pick':'reword', 'reword':'fixup', 'fixup':'squash', 'squash':'edit', 'edit':'exec', 'exec':'pick' }
+" }}}
 
-"------------------------------------
-" neocomplete
-"------------------------------------
-"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" neocomplete {{{
+" Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -481,13 +501,20 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
+let g:neocomplete#same_filetypes           = {
+  \   'html': 'html,css,javascript,php',}
+let g:neocomplete#sources = {
+  \   '_':    ['file', 'ultisnips', 'buffer', 'member', 'dictionary',],
+  \   'vim':  ['file', 'ultisnips', 'buffer', 'member', 'dictionary', 'syntax', 'vim'],
+  \   'html': ['file', 'ultisnips', 'buffer', 'member', 'dictionary', 'syntax',],}
 " Define dictionary.
 let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'vimshell' : $HOME.'/.vimshell_hist',
     \ 'scheme' : $HOME.'/.gosh_completions',
-    \'ruby' : $HOME.'/.vim/dict/rails.dict',
-    \'eruby' : $HOME.'/.vim/dict/rails.dict'
+    \ 'ruby' : $HOME.'/.vim/dict/rails.dict',
+    \ 'eruby' : $HOME.'/.vim/dict/rails.dict',
+    \ 'php' : $HOME.'/.vim/dict/php.dict'
     \ }
 
 " Define keyword.
@@ -548,17 +575,16 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
 "let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
 "let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
 
 " For perlomni.vim setting.
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
+" }}}
 
-"------------------------------------
-" neosnippet
-"------------------------------------
+" neosnippet {{{
 " Plugin key-mappings.
 imap <C-k>     <Plug>(neosnippet_expand_or_jump)
 smap <C-k>     <Plug>(neosnippet_expand_or_jump)
@@ -576,3 +602,4 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+" }}}

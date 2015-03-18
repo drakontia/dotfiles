@@ -74,7 +74,3 @@ set ruler
 "自動的に QuickFix リストを表示する
 autocmd QuickfixCmdPost make,grep,grepadd,vimgrep,vimgrepadd cwin
 autocmd QuickfixCmdPost lmake,lgrep,lgrepadd,lvimgrep,lvimgrepadd lwin
-
-" vim-powerlineでフォントにパッチを当てないなら以下をコメントアウト
-"let g:Powerline_symbols = 'fancy'
-"let g:Powerline_mode_n = 'NORMAL'

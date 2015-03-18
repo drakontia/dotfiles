@@ -106,8 +106,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " 補完 autocomplpop.vim : insertmodeで自動で補完をpopup
   " Bundle 'AutoComplPop'
 
+  NeoBundle 'KazuakiM/vim-snippets'
+  " ultisnips {{{
+  NeoBundle 'SirVer/ultisnips'
+    let g:UltiSnipsJumpForwardTrigger='<TAB>'
+    let g:UltiSnipsEditSplit='vertical'
+    let g:UltiSnipsSnippetsDir=$HOME.'/.vim/bundle/vim-snippets/UltiSnips'
+  " }}}
+
   " 補完 neocomplcache.vim : 究極のVim的補完環境
-  NeoBundle 'Shougo/neocomplete.vim'
+  NeoBundleLazy 'Shougo/neocomplete.vim', {
+  \ 'depends': ['KazuakiM/vim-snippets', 'SirVer/ultisnips', 'Shougo/context_filetype.vim'],
+  \ 'autoload' : {
+  \   'insert' : 1,},}
 
   " neocomplcacheのsinpet補完
   NeoBundle 'Shougo/neosnippet.vim'
@@ -123,6 +134,19 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " Bundle 'ujihisa/neco-look'
 
   " NeoBundle 'taichouchou2/vim-rsense'
+
+  " vim-watchdogs
+  NeoBundleLazy 'osyo-manga/vim-watchdogs', {
+  \ 'depends': ['thinca/vim-quickrun', 'osyo-manga/shabadou.vim',
+  \             'KazuakiM/vim-qfsigns', 'KazuakiM/vim-qfstatusline', 'dannyob/quickfixstatus'],
+  \ 'autoload' : {
+  \    'filetypes': ['php'],},}
+
+  " vim-php-cs-fixer
+  NeoBundleLazy 'stephpy/vim-php-cs-fixer', {
+  \ 'autoload' : {
+  \   'filetypes': 'php',},}
+
 " }}}
 
 " Searching/Moving{{{
@@ -174,8 +198,12 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   " Pydiction : Python用の入力補完
   NeoBundle 'Pydiction'
 
+  NeoBundle 'szw/vim-tags'
+
   " ソースコード上のメソッド宣言、変数宣言の一覧を表示
-  NeoBundle 'taglist.vim'
+  NeoBundleLazy 'vim-scripts/taglist.vim', {
+  \  'autoload' : {
+  \    'commands' : 'Tlist',},}
 
   " tagsを利用したソースコード閲覧・移動補助機能 tagsファイルの自動生成
   NeoBundle 'Source-Explorer-srcexpl.vim'
