@@ -3,8 +3,6 @@
 gem: --no-rdoc --no-ri
 :verbose: true
 :sources:
-- http://gems.github.com
-- http://gems.rubyforge.org
 - https://rubygems.org/
 :bulk_threshold: 1000
 :backtrace: false
