@@ -361,6 +361,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
         \                   'complete' : 'customlist,unite#complete_source'},
         \                 'UniteWithCursorWord', 'UniteWithInput']
         \ }})
+  NeoBundle 'Shougo/neomru.vim'
   NeoBundle 'Shougo/unite-build', '', 'default'
   NeoBundle 'Shougo/unite-ssh', '', 'default'
   NeoBundleLazy 'ujihisa/vimshell-ssh', { 'autoload' : {
