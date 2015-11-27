@@ -12,7 +12,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-  "let g:neobundle_default_git_protocol='git'
+  let g:neobundle_default_git_protocol='git'
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   " Edit {{{
@@ -173,7 +173,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'camelcasemotion'
 
   " <Leader><Leader>w/fなどで、motion先をhilightする
-  NeoBundle 'EasyMotion'
+  " NeoBundle 'EasyMotion'
 
   " matchit.vim : 「%」による対応括弧へのカーソル移動機能を拡張
   NeoBundle 'matchit.zip'
@@ -254,7 +254,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'vim-scripts/dbext.vim'
 
   " syntax checking plugins exist for eruby, haml, html, javascript, php, python, ruby and sass.
-  NeoBundle 'scrooloose/syntastic'
+  " NeoBundle 'scrooloose/syntastic'
 
   " Varnish
   NeoBundle 'nwjsmith/vim-varnish'
@@ -285,15 +285,15 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   " vimshell : vimのshell
   NeoBundle 'Shougo/vimshell.git'
 
-  " vimproc : vimから非同期実行。vimshelleで必要
-  NeoBundle 'Shougo/vimproc', {
-      \ 'build' : {
-      \     'windows' : 'make -f make_mingw32.mak',
-      \     'cygwin' : 'make -f make_cygwin.mak',
-      \     'mac' : 'make -f make_mac.mak',
-      \     'unix' : 'make -f make_unix.mak',
-      \    },
-      \ }
+  " vimproc : vimから非同期実行。vimshellで必要
+  " NeoBundle 'Shougo/vimproc', {
+  "     \ 'build' : {
+  "     \     'windows' : 'make -f make_mingw32.mak',
+  "     \     'cygwin' : 'make -f make_cygwin.mak',
+  "     \     'mac' : 'make -f make_mac.mak',
+  "     \     'unix' : 'make -f make_unix.mak',
+  "     \    },
+  "     \ }
 
   " vim-altercmd : Ex command拡張
   NeoBundle 'tyru/vim-altercmd'
