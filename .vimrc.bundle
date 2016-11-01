@@ -10,9 +10,10 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+let neobundle#types#git#default_protocol = 'ssh'
+
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-  let g:neobundle_default_git_protocol='git'
   NeoBundleFetch 'Shougo/neobundle.vim'
 
   " Edit {{{
@@ -45,9 +46,6 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
   " YankRing.vim : ヤンクの履歴を管理し、順々に参照、出力できるようにする
   NeoBundle 'YankRing.vim'
-
-  " Sphinx
-  NeoBundle 'drakontia/sphinx.vim'
 
   " Vimでrstのテーブルを作成できる
   NeoBundle 'nvie/vim-rst-tables'
@@ -137,7 +135,8 @@ call neobundle#begin(expand('~/.vim/bundle/'))
   NeoBundle 'rhysd/vim-textobj-ruby'
 
   NeoBundle 'marcus/rsense'
-  NeoBundle 'supermomonga/neocomplete-rsense.vim'
+  NeoBundle 'supermomonga/neocomplete-rsense.vim', {
+    \ 'autoload' : { 'insert' : 1, 'filetype' : 'ruby', } }
 
   " 静的解析
   NeoBundle 'scrooloose/syntastic'

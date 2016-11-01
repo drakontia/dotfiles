@@ -127,7 +127,7 @@
   iss = issue # my extended command
 
 [http]
-  sslVerify = false
+  #sslVerify = false
   #if you need
   #proxy = http://xxx.com:8080
 
