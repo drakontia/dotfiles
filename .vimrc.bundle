@@ -14,7 +14,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-let g:neobundle_default_git_protocol='git'
+" let g:neobundle_default_git_protocol='https'
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Edit {{{
@@ -118,6 +118,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " neocomplcacheのsinpet補完
   NeoBundle 'Shougo/neosnippet.vim'
+  NeoBundle 'Shougo/neosnippet-snippets'
 
   " rubyでrequire先を補完する
   NeoBundle 'rhysd/unite-ruby-require.vim'

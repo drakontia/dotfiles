@@ -1,5 +1,6 @@
 "基本設定
 source ~/dotfiles/.vimrc.basic
+g:neobundle_default_git_porotocol='git'
 "StatusLine設定
 source ~/dotfiles/.vimrc.statusline
 "インデント設定
