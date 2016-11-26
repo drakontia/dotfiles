@@ -2,7 +2,7 @@
 
 filetype plugin indent off     " required!
 
-if !1 | finish | endif
+if 0 | endif
 
 if has('vim_starting')
   if &compatible
@@ -14,7 +14,6 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-" let g:neobundle_default_git_protocol='https'
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Edit {{{
@@ -47,9 +46,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
   " YankRing.vim : ヤンクの履歴を管理し、順々に参照、出力できるようにする
   NeoBundle 'YankRing.vim'
-
-  " Sphinx
-  NeoBundle 'drakontia/sphinx.vim'
 
   " Vimでrstのテーブルを作成できる
   NeoBundle 'nvie/vim-rst-tables'
@@ -226,7 +222,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundle 'scrooloose/syntastic'
 
   " Varnish
-  NeoBundle 'nwjsmith/vim-varnish'
+  " NeoBundle 'nwjsmith/vim-varnish'
 
 " }}}
 
@@ -344,7 +340,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
   NeoBundleLazy 'thinca/vim-unite-history', { 'autoload' : {
         \ 'unite_sources' : ['history/command', 'history/search']
         \ }}
-  NeoBundle 'Sixeight/unite-grep'
   NeoBundle 'basyura/unite-rails'
   NeoBundle 'ujihisa/unite-rake'
   NeoBundle 'choplin/unite-vim_hacks'
