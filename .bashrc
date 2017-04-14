@@ -4,6 +4,8 @@ if [ -d /etc/bash_completion.d ]; then
     source /etc/bash_completion.d/mercurial.sh
 fi
 
+source ~/.git-prompt.sh
+
 # prompt command
 hg_branch() {
     hg branch 2> /dev/null | awk '{print "(hg:" $1 ")"}'
